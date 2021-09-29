@@ -5,7 +5,7 @@ SSD=$(/usr/sbin/diskutil info / | /usr/bin/awk '/Solid State/{print $NF}')
 FUS=$(/usr/sbin/diskutil info / | /usr/bin/awk '/Fusion Drive/{print $NF}')
 
 #Takes results from the check and displays SSD if Fusion Drive is No
-if [ $SSD == Yes ] && [ $FUS == No ]; then
+if [ $SSD == Yes ] && [[ $FUS != "Yes" ]]; then
 
 /bin/echo "<result>SSD</result>"
 
