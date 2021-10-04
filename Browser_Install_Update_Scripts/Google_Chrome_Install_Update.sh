@@ -16,12 +16,11 @@
 #	Version: 1.0
 #	- Joe Farage, 17.03.2015
 #
-# Version 1.1
-#- Reiven Shadowmoon, 30.09.2021
-#- Change: Updated to include Apple Silicon and Universal installer.
+#	Version 1.1
+#	- Reiven Shadowmoon, 30.09.2021
+#	- Change: Updated to include Apple Silicon and Universal installer.
 ####################################################################################################
-# Script to download and install Google Earth.
-# Only works on Intel systems.
+
 
 dmgfile="googlechrome.dmg"
 volname="Google Chrome"
