@@ -31,6 +31,11 @@ then
   echo "Removed previous CSV file."
 fi
 
+#Flush cache and kill mDNSResponder
+/usr/bin/dscacheutil -flushcache
+/usr/bin/killall -INFO mDNSResponder
+/usr/bin/killall -HUP mDNSResponder
+
 #Downooads current version of csv
 curl -L $URL -o /tmp/computernames.csv
 
