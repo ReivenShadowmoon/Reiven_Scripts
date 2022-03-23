@@ -4,7 +4,7 @@
 #Replace the "document ID" with the one unique for yours
 #example: https://docs.google.com/spreadsheets/u/0/d/<document ID>/export?format=csv&id=<document ID>&gid=0
 
-#Example G-Sheet lawout
+#Example G-Sheet layout
 #Example columns: SerialNumber, Name, AssetTag
 #Variable cName uses the column 2 to get the name information
 #Variable assetTag uses column 3 to get the asset tag information
