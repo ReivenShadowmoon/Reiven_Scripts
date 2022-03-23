@@ -1,11 +1,13 @@
 #!/bin/zsh
 
-#please set parameter for in the policy with the g-sheet URL
+#please set parameter 4 in the policy with the g-sheet URL
 #Replace the "document ID" with the one unique for yours
-#Exmpale columns: SerialNumber, Name, AssetTag
+#example: https://docs.google.com/spreadsheets/u/0/d/<document ID>/export?format=csv&id=<document ID>&gid=0
+
+#Example G-Sheet lawout
+#Example columns: SerialNumber, Name, AssetTag
 #Variable cName uses the column 2 to get the name information
 #Variable assetTag uses column 3 to get the asset tag information
-#example: https://docs.google.com/spreadsheets/u/0/d/<document ID>/export?format=csv&id=<document ID>&gid=0
 
 #version 1.0
 #Created on 3/23/2022
@@ -42,5 +44,7 @@ assetTag=`(cat $CSV_PATH | grep -i $serialNumber | awk -F',' '{print $3}' )`
 
 #leverages the jamf binary to set computer name. This will set ComputerName, LocalHostName, and HostName with a single command
 /usr/local/bin/jamf setComputerName -name $cName
-#by adding the assetTag variable tot he recon it will add the asset tag to the computer profile in JAMF. 
-/usr/local/bin/jamf recon -assetTag $assetTag
+
+#By adding the assetTag variable tot he recon it will add the asset tag to the computer profile in JAMF.
+#This is optional please uncommet if you want to use it.
+#/usr/local/bin/jamf recon -assetTag $assetTag
