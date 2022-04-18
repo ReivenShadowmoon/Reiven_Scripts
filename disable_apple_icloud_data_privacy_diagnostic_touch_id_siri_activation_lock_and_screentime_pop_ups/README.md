@@ -10,6 +10,7 @@ Starting in 10.7.2, Apple has added several pop-up windows which appear at the f
 * macOS 10.14.0: Dark or Light Appearance window
 * macOS 10.15.0: Activation Lock window
 * macOS 10.15.0: Screentime window
+* macOS 11.X: Accessibility
 
 Since having this appear may not be desirable in all Mac environments, it makes sense to be able to turn these pop-up windows off for new user accounts.
 
